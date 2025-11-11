@@ -1,0 +1,17 @@
+import nltk
+from collections import defaultdict
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+text = nltk.word_tokenize("Nick likes to play football. Nick does not like to play cricket.")
+tagged = nltk.pos_tag(text)
+print(tagged)
+addNounWords = []
+for word, tag in tagged:
+    if tag in ['NN', 'NNS', 'NNPS', 'NNP']:
+        addNounWords.append(word)
+print(addNounWords)
+temp = defaultdict(int)
+for noun in addNounWords:
+    temp[noun] += 1
+res = max(temp, key=temp.get)
+print("Word with maximum frequency:", res)
