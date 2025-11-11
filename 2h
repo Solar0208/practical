@@ -1,0 +1,79 @@
+from __future__ import with_statement
+import re
+
+words = []
+testword = []
+ans = []
+
+print("MENU")
+print("-----------")
+print("1. Hash tag segmentation")
+print("2. URL segmentation")
+print("Enter the input choice for performing word segmentation:")
+choice = int(input())
+
+if choice == 1:
+    text = "#whatismyname"
+    print("Input with HashTag:", text)
+    pattern = re.compile("[^\w']")
+    a = pattern.sub('', text)
+
+elif choice == 2:
+    text = "www.whatismyname.com"
+    print("Input with URL:", text)
+    a = re.split(r'\s|(?<!\d)[,.](?!\d)', text)
+    splitwords = ["www", "com", "in"]
+    a = "".join([each for each in a if each not in splitwords])
+
+else:
+    print("Wrong choice... Try again")
+    exit()
+
+print("Processed text:", a)
+
+for each in a:
+    testword.append(each)
+
+test_length = len(testword)
+
+with open('words.txt', 'r') as f:
+    lines = f.readlines()
+    words = [e.strip() for e in lines]
+
+def Seg(a, length):
+    ans = []
+    for k in range(0, length + 1):
+        if a[0:k] in words:
+            print(a[0:k], "- appears in the corpus")
+            ans.append(a[0:k])
+            break
+    if ans:
+        g = max(ans, key=len)
+        return g
+    else:
+        return ""
+
+test_tot_itr = 0
+answer = []
+score = 0
+N = 37
+
+while test_tot_itr < test_length:
+    ans_words = Seg(a, test_length)
+    if ans_words:
+        test_itr = len(ans_words)
+        answer.append(ans_words)
+        a = a[test_itr:test_length]
+        test_tot_itr += test_itr
+    else:
+        break
+
+Aft_Seg = " ".join(answer)
+
+print("\nOutput")
+print("---------")
+print(Aft_Seg)
+
+C = len(answer)
+score = (C * N) / N
+print("Score:", score)
