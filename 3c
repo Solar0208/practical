@@ -1,0 +1,10 @@
+# pip install nltk
+
+import nltk
+from nltk.corpus import wordnet
+
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
+print(wordnet.synsets("active"))
+print(wordnet.lemma('active.a.01.active').antonyms())
