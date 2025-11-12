@@ -3,6 +3,7 @@ pip install spacy
 pip install textdistance
 pip install scikit-learn
 python -m spacy download en_core_web_sm
+#Speech Tagging using SpaCy
 import spacy
 from spacy import displacy
 
@@ -28,6 +29,30 @@ print(f'{word.text:{12}} {word.pos_:{10}} {word.tag_:{8}} {spacy.explain(word.ta
 sen = sp(u"I like to play football. I hated it in my childhood though")
 num_pos = sen.count_by(spacy.attrs.POS)
 for k, v in sorted(num_pos.items()):
+
+
+#Speech Tagging using NLTK
+
+import nltk
+from nltk.corpus import state_union
+from nltk.tokenize import PunktSentenceTokenizer
+
+train_text = state_union.raw("2005-GWBush.txt")
+sample_text = state_union.raw("2006-GWBush.txt")
+
+custom_sent_tokenizer = PunktSentenceTokenizer(train_text)
+tokenized = custom_sent_tokenizer.tokenize(sample_text)
+
+def process_content():
+    try:
+        for i in tokenized[:2]:
+            words = nltk.word_tokenize(i)
+            tagged = nltk.pos_tag(words)
+            print(tagged)
+    except Exception as e:
+        print(str(e))
+
+process_content()
     print(f'{k}. {sen.vocab[k].text:{8}}: {v}')
 
 displacy.serve(sen, style='dep', options={'distance': 120})
