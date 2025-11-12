@@ -1,0 +1,29 @@
+import nltk
+from nltk.stem import PorterStemmer, LancasterStemmer, RegexpStemmer, SnowballStemmer, WordNetLemmatizer
+
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
+# 1. Porter Stemmer
+word_stemmer = PorterStemmer()
+print("Porter Stemmer Output:", word_stemmer.stem('writing'))
+
+# 2. Lancaster Stemmer
+lanc_stemmer = LancasterStemmer()
+print("Lancaster Stemmer Output:", lanc_stemmer.stem('writing'))
+
+# 3. Regexp Stemmer
+reg_stemmer = RegexpStemmer('ing$|s$|e$|able$', min=4)
+print("Regexp Stemmer Output:", reg_stemmer.stem('writing'))
+
+# 4. Snowball Stemmer (supports multiple languages)
+english_stemmer = SnowballStemmer('english')
+print("Snowball Stemmer Output:", english_stemmer.stem('writing'))
+
+# 5. WordNet Lemmatizer
+lemmatizer = WordNetLemmatizer()
+
+print("\nWord\t:\tLemma")
+print("rocks\t:", lemmatizer.lemmatize("rocks"))
+print("corpora\t:", lemmatizer.lemmatize("corpora"))
+print("better\t:", lemmatizer.lemmatize("better", pos="a"))
