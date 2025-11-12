@@ -1,0 +1,68 @@
+Got it 👍
+The two images you uploaded show **index pages from a Practical NLP journal**.
+Here’s the full **line-by-line content** transcribed from both images for you:
+
+---
+
+### 📘 **INDEX – Practical NLP**
+
+#### Page 1
+
+| Sr. No.                | Name of Practical                                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 1a                     | Install NLTK                                                                                                                             |
+| 1b                     | Convert the given text to speech                                                                                                         |
+| 1c                     | Convert audio file Speech to Text                                                                                                        |
+| 2a                     | Study of various Corpora like: Brown, Inaugural, Reuters, udhr with various methods like fields(), raw(), sents(), words(), categories() |
+| 2b                     | Study of Conditional Frequency Distributions                                                                                             |
+| 2c                     | Study of tagged words of corpora using access categories                                                                                 |
+| 2d                     | Study of WordNet                                                                                                                         |
+| 2e                     | Make program to find the most frequently occurring noun, verbs, adjectives                                                               |
+| 2f                     | Study Default Tagger, Unigram Tagger, Bigram Tagger, Trigram Tagger                                                                      |
+| 2g                     | Study of Phonetics using NLTK and Phonetics module                                                                                       |
+| 2h                     | Study of WordNet Dictionary with methods like synsets, definitions, examples, lemma_names                                                |
+| 3a                     | Study of WordNet Dictionary with methods synsets, hypernyms, hyponyms, meronyms, holonyms                                                |
+| 3b                     | Write a program using Python to find synonym and antonym of word ‘active’ using WordNet                                                  |
+| 3c                     | Compare two nouns                                                                                                                        |
+| 3d                     | Study of Lemmas using WordNet                                                                                                            |
+| **Handling Stopword:** |                                                                                                                                          |
+| i)                     | Using NLTK Adding or Removing Stop Words in NLTK’s Default Stop Word List                                                                |
+| ii)                    | Using Gensim Adding and Removing Stop Words in Gensim Stop Word List                                                                     |
+| iii)                   | Using SpaCy Adding and Removing Stop Words in SpaCy Stop Word List                                                                       |
+| **Text Tokenization:** |                                                                                                                                          |
+| 4a                     | Tokenization using Python’s split() function                                                                                             |
+| 4b                     | Tokenization using Regular Expressions (RegEx)                                                                                           |
+| 4c                     | Tokenization using NLTK                                                                                                                  |
+| 4d                     | Tokenization using the SpaCy library                                                                                                     |
+| 4e                     | Tokenization using Keras                                                                                                                 |
+| 4f                     | Tokenization using Gensim                                                                                                                |
+
+---
+
+#### Page 2
+
+| Sr. No. | Practical Name                                                                                                        |
+| ------- | --------------------------------------------------------------------------------------------------------------------- |
+| **5**   | Import NLP Libraries for Indian Languages and perform:                                                                |
+| 5a      | Word Tokenization in Hindi                                                                                            |
+| 5b      | Generate Hindi sentences from a given Hindi text input                                                                |
+| 5c      | Identify the Indian language of a text                                                                                |
+| **6**   | Sentence tokenization, word tokenization, Part of speech tagging and Named Entity recognition using user defined text |
+| 6a      | Sentence Tokenization                                                                                                 |
+| 6b      | Word Tokenization                                                                                                     |
+| 6c      | POS Tagging                                                                                                           |
+| 6d      | Named Entity Recognition                                                                                              |
+| **7**   | Define grammar using NLTK. Analyze a sentence using the same                                                          |
+| 7a      | Accept the input string with Regular Expression or Finite Automaton                                                   |
+| 7b      | Implementation of Deductive Chart Parser                                                                              |
+| 7c      | Implementation of given sentence parsing using context free grammar and parsing                                       |
+| 7d      | Study PorterStemmer, LancasterStemmer, SnowballStemmer, WordNetLemmatizer, RegexStemmer                               |
+| **8**   | Implement Naive Bayes Classifier                                                                                      |
+| **9**   | Speech Tagging using SpaCy                                                                                            |
+| **10**  | Usage of Give and Take in the Penn Treebank                                                                           |
+| 10a     | Probabilistic Parser                                                                                                  |
+| 10b     | Parse a sentence and draw a tree using Malt Parsing                                                                   |
+
+---
+
+Would you like me to turn this into a **formatted Word table or PDF** version (for printing or submission)?
