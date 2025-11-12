@@ -1,0 +1,23 @@
+pip install nltk
+pip install spacy
+pip install textdistance
+pip install scikit-learn
+python -m spacy download en_core_web_sm
+
+from nltk.corpus import wordnet as wn
+
+def get_first_sense(word, pos=None):
+    if pos:
+        synsets = wn.synsets(word, pos)
+    else:
+        synsets = wn.synsets(word)
+    return synsets[0]
+
+best_synset = get_first_sense('bank')
+print(f'{best_synset.name()}: {best_synset.definition()}')
+
+best_synset = get_first_sense('set', 'n')
+print(f'{best_synset.name()}: {best_synset.definition()}')
+
+best_synset = get_first_sense('set', 'v')
+print(f'{best_synset.name()}: {best_synset.definition()}')
